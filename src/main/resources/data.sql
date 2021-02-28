@@ -1,0 +1,1 @@
+docker run --name mysql-local -e MYSQL_ROOT_PASSWORD=moojai4p -d mysql:latest

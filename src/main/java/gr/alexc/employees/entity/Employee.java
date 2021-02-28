@@ -41,4 +41,8 @@ public class Employee {
     @Column(name = "company_phone_landline")
     private String companyPhoneLandline;
 
+    @ManyToOne
+    @JoinColumn(name="office_id", nullable=true)
+    private Office office;
+
 }

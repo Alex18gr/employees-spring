@@ -1,6 +1,7 @@
 package gr.alexc.employees.mapper;
 
 import gr.alexc.employees.dto.EmployeeDTO;
+import gr.alexc.employees.dto.csv.EmployeeCsvDto;
 import gr.alexc.employees.entity.Employee;
 
 public class EmployeeMapper {
@@ -31,6 +32,20 @@ public class EmployeeMapper {
         employeeDTO.setCompanyPhoneMobile(employee.getCompanyPhoneMobile());
         employeeDTO.setCompanyPhoneLandline(employee.getPersonalPhoneLandline());
         return employeeDTO;
+    }
+
+    public static EmployeeCsvDto employeeToEmployeeCsvDto(Employee employee) {
+        EmployeeCsvDto employeeCsvDTO = new EmployeeCsvDto();
+        employeeCsvDTO.setId(employee.getId());
+        employeeCsvDTO.setName(employee.getName());
+        employeeCsvDTO.setSurname(employee.getSurname());
+        employeeCsvDTO.setPersonalEmail(employee.getPersonalEmail());
+        employeeCsvDTO.setCompanyEmail(employee.getCompanyEmail());
+        employeeCsvDTO.setPersonalPhoneMobile(employee.getPersonalPhoneMobile());
+        employeeCsvDTO.setPersonalPhoneLandline(employee.getPersonalPhoneLandline());
+        employeeCsvDTO.setCompanyPhoneMobile(employee.getCompanyPhoneMobile());
+        employeeCsvDTO.setCompanyPhoneLandline(employee.getPersonalPhoneLandline());
+        return employeeCsvDTO;
     }
 
 }

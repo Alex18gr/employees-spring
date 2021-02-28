@@ -31,6 +31,7 @@ public class EmployeeMapper {
         employeeDTO.setPersonalPhoneLandline(employee.getPersonalPhoneLandline());
         employeeDTO.setCompanyPhoneMobile(employee.getCompanyPhoneMobile());
         employeeDTO.setCompanyPhoneLandline(employee.getPersonalPhoneLandline());
+        employeeDTO.setOffice(OfficeMapper.officeToOfficeDto(employee.getOffice()));
         return employeeDTO;
     }
 

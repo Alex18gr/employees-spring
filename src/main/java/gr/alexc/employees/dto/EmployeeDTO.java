@@ -16,4 +16,5 @@ public class EmployeeDTO {
     private String personalPhoneLandline;
     private String companyPhoneMobile;
     private String companyPhoneLandline;
+    private OfficeDTO office;
 }

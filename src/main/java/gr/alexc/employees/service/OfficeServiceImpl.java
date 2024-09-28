@@ -3,21 +3,20 @@ package gr.alexc.employees.service;
 import gr.alexc.employees.dto.OfficeDTO;
 import gr.alexc.employees.mapper.OfficeMapper;
 import gr.alexc.employees.repository.OfficeRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class OfficeServiceImpl implements OfficeService {
 
     private final OfficeRepository officeRepository;
-
-    public OfficeServiceImpl(OfficeRepository officeRepository) {
-        this.officeRepository = officeRepository;
-    }
+    private final OfficeMapper officeMapper;
 
     @Override
     public Page<OfficeDTO> getOffices(Pageable pageable) {
-        return this.officeRepository.findAll(pageable).map((OfficeMapper::officeToOfficeDto));
+        return this.officeRepository.findAll(pageable).map((officeMapper::officeToOfficeDto));
     }
 }

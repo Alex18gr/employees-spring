@@ -3,26 +3,13 @@ package gr.alexc.employees.mapper;
 import gr.alexc.employees.dto.OfficeDTO;
 import gr.alexc.employees.dto.OfficeDetailsDTO;
 import gr.alexc.employees.entity.Office;
+import org.mapstruct.Mapper;
 
-import java.util.stream.Collectors;
+@Mapper(componentModel = "spring")
+public interface OfficeMapper {
 
-public class OfficeMapper {
+    OfficeDTO officeToOfficeDto(Office office);
 
-    public static OfficeDTO officeToOfficeDto(Office office) {
-        OfficeDTO officeDTO = new OfficeDTO();
-        officeDTO.setId(office.getId());
-        officeDTO.setName(office.getName());
-        officeDTO.setLocation(office.getLocation());
-        return officeDTO;
-    }
-
-    public static OfficeDetailsDTO officeToOfficeDetailsDto(Office office) {
-        OfficeDetailsDTO officeDetailsDTO = new OfficeDetailsDTO();
-        officeDetailsDTO.setId(office.getId());
-        officeDetailsDTO.setLocation(office.getLocation());
-        officeDetailsDTO.setName(office.getName());
-        officeDetailsDTO.setEmployees(office.getEmployees().stream().map(EmployeeMapper::employeeToEmployeeDto).collect(Collectors.toSet()));
-        return officeDetailsDTO;
-    }
+    OfficeDetailsDTO officeToOfficeDetailsDto(Office office);
 
 }

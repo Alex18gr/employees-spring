@@ -1,6 +1,6 @@
 package gr.alexc.employees.repository;
 
-import gr.alexc.employees.entity.Employee;
+import gr.alexc.employees.entity.employee.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

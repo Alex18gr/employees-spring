@@ -2,7 +2,7 @@ package gr.alexc.employees.mapper;
 
 import gr.alexc.employees.dto.EmployeeDTO;
 import gr.alexc.employees.dto.csv.EmployeeCsvDto;
-import gr.alexc.employees.entity.Employee;
+import gr.alexc.employees.entity.employee.Employee;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

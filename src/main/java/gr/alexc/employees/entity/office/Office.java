@@ -1,5 +1,6 @@
-package gr.alexc.employees.entity;
+package gr.alexc.employees.entity.office;
 
+import gr.alexc.employees.entity.employee.Employee;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,5 +22,8 @@ public class Office {
 
     @OneToMany(mappedBy="office")
     private Set<Employee> employees;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private OfficeAddress address;
 
 }

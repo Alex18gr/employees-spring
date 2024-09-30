@@ -1,9 +1,12 @@
-package gr.alexc.employees.entity;
+package gr.alexc.employees.entity.employee;
 
+import gr.alexc.employees.entity.office.Office;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -25,13 +28,11 @@ public class Employee {
 
     private String companyEmail;
 
-    private String personalPhoneMobile;
+    @OneToOne(cascade = CascadeType.ALL)
+    private EmployeeAddress address;
 
-    private String personalPhoneLandline;
-
-    private String companyPhoneMobile;
-
-    private String companyPhoneLandline;
+    @OneToMany
+    private List<Employee> employees;
 
     @ManyToOne
     private Office office;

@@ -31,8 +31,8 @@ public class Employee {
     @OneToOne(cascade = CascadeType.ALL)
     private EmployeeAddress address;
 
-    @OneToMany
-    private List<Employee> employees;
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    private List<EmployeePhone> phones;
 
     @ManyToOne
     private Office office;

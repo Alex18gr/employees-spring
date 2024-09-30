@@ -1,7 +1,7 @@
 package gr.alexc.employees.service;
 
-import gr.alexc.employees.dto.EmployeeDTO;
-import gr.alexc.employees.mapper.EmployeeMapper;
+import gr.alexc.employees.dto.employee.EmployeeDTO;
+import gr.alexc.employees.mapper.employee.EmployeeMapper;
 import gr.alexc.employees.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

@@ -1,7 +1,7 @@
 package gr.alexc.employees.service;
 
-import gr.alexc.employees.dto.OfficeDTO;
-import gr.alexc.employees.mapper.OfficeMapper;
+import gr.alexc.employees.dto.office.OfficeDTO;
+import gr.alexc.employees.mapper.office.OfficeMapper;
 import gr.alexc.employees.repository.OfficeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

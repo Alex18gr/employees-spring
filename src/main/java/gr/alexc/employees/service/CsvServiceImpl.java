@@ -6,7 +6,7 @@ import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import gr.alexc.employees.dto.csv.EmployeeCsvDto;
 import gr.alexc.employees.entity.employee.Employee;
-import gr.alexc.employees.mapper.EmployeeMapper;
+import gr.alexc.employees.mapper.employee.EmployeeMapper;
 import gr.alexc.employees.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

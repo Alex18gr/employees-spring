@@ -1,6 +1,6 @@
 package gr.alexc.employees.controller;
 
-import gr.alexc.employees.dto.EmployeeDTO;
+import gr.alexc.employees.dto.employee.EmployeeDTO;
 import gr.alexc.employees.service.EmployeeService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

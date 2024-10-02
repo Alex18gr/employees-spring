@@ -9,5 +9,4 @@ public interface OfficeAddressMapper {
 
     OfficeAddressDTO toOfficeAddressDTO(OfficeAddress officeAddress);
 
-    OfficeAddress fromOfficeAddressDTO(OfficeAddressDTO officeAddressDTO);
 }

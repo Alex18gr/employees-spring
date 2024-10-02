@@ -9,5 +9,4 @@ public interface EmployeeAddressMapper {
 
     EmployeeAddressDTO toEmployeeAddressDTO(EmployeeAddress employeeAddress);
 
-    EmployeeAddress fromEmployeeAddressDTO(EmployeeAddressDTO employeeAddressDTO);
 }

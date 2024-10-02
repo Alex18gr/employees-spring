@@ -1,16 +1,16 @@
 package gr.alexc.employees.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum EmployeePhoneType {
     PERSONAL("PERSONAL"),
     COMPANY("COMPANY");
 
-    private String type;
+    private final String type;
 
     EmployeePhoneType(String type) {
         this.type = type;
     }
 
-    public String getType() {
-        return type;
-    }
 }

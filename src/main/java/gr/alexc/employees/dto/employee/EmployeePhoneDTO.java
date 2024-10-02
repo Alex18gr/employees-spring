@@ -1,5 +1,6 @@
 package gr.alexc.employees.dto.employee;
 
+import gr.alexc.employees.enums.EmployeePhoneLineType;
 import gr.alexc.employees.enums.EmployeePhoneType;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,4 +12,5 @@ public class EmployeePhoneDTO {
     private String prefix;
     private String phone;
     private EmployeePhoneType type;
+    private EmployeePhoneLineType lineType;
 }

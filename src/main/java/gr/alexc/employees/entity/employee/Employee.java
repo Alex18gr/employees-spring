@@ -1,5 +1,6 @@
 package gr.alexc.employees.entity.employee;
 
+import gr.alexc.employees.entity.Department;
 import gr.alexc.employees.entity.office.Office;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -36,5 +37,8 @@ public class Employee {
 
     @ManyToOne
     private Office office;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Department department;
 
 }
